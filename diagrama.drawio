@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="ZjTr0IKhgkKJtNLl-vMa" name="Página-1">
+        <mxGraphModel dx="643" dy="665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="GameManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="200" width="200" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="- map_size: tuple &#10;- map: array &#10;- player_1: Playable&#10;- player_2: Playable&#10;- turns: int&#10;- shots_history_p1: list&#10;- shots_history_p2: list&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="200" height="114" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="140" width="200" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+ get_map_size( ): tuple&#10;+ get_map( ): array&#10;+ get_player_1( ): Playable&#10;+ get_player_2( ): Playable&#10;+ get_turns( ): int&#10;+ get_shots_history_p1( ): list&#10;+ get_shots_history_p2( ): list&#10;+ set_map_size(tuple)&#10;+ set_map(array)&#10;+ set_player_1(Playable)&#10;+ set_player_2(Playable)&#10;+ set_turns(int)&#10;+ set_shots_history_p1(list)&#10;+ set_shots_history_p2(list)&#10;+ start( )&#10;+ choose_map(mapSize): int&#10;+ create_map( ): str&#10;+ assign_fleet( )&#10;+ show_ships( ): str&#10;+ start_turn( )&#10;+ check_shot(x, y): bool&#10;+ show_check_shoot(x, y, bool)&#10;+ end_game( )&#10;+ count_destroy_ships( ): int, int&#10;+ increase_turn( )&#10;+ show_stats( ): str&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="152" width="200" height="378" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Player" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="970" width="160" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Fleet" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="334" y="200" width="160" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="- aircraft_carrier: ship&#10;- frigate: ship&#10;- vessel: ship&#10;- submarine: ship&#10;- destoyer: ship&#10;- sunk_fleet: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
+                    <mxGeometry y="26" width="160" height="94" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="10" vertex="1">
+                    <mxGeometry y="120" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="+ get_aircraft_carrier( ): ship&#10;+ get_frigate( ): ship&#10;+ get_vessel( ): ship&#10;+ get_submarine( ) : ship&#10;+ get_destroyer( ): ship&#10;+ is_sunk_fleet( ): bool&#10;+ set_aircraft_carrier(ship)&#10;+ set_frigate(ship)&#10;+ set_vessel(ship)&#10;+ set_submarine(ship)&#10;+ set_destroyer(ship)&#10;+ set_sunk_fleet(bool)&#10;+ group_fleet( ): list&#10;+ locate_randomly( )&#10;+ choose_position( )&#10;+ check_sunk_ship( ): bool&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
+                    <mxGeometry y="128" width="160" height="232" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Machine" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="970" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="- target_mode: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="14" vertex="1">
+                    <mxGeometry y="52" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="+ is_target_mode( ): bool&#10;+ set_target_mode(bool)&#10;+ adjacent_shot( )&#10;+ target_shot( )" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
+                    <mxGeometry y="60" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Ship" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="200" width="160" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="- size: int&#10;- position: tuple&#10;- sunk: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="18" vertex="1">
+                    <mxGeometry y="26" width="160" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="18" vertex="1">
+                    <mxGeometry y="80" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="+ get_size( ): int&#10;+ get_position( ): tuple&#10;+ is_sunk( ): bool&#10;+ set_size(int)&#10;+ set_position(tuple)&#10;+ set_sunk(bool)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="18" vertex="1">
+                    <mxGeometry y="88" width="160" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;&lt;Abstract&gt;&gt;&#10;Playable" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="417" y="730" width="160" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="- fleet: Fleet&#10;- turn: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="22" vertex="1">
+                    <mxGeometry y="40" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="22" vertex="1">
+                    <mxGeometry y="80" width="160" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="+ get_fleet( ): fleet&#10;+ is_turn( ): bool&#10;+ set_fleet (fleet)&#10;+ set_turn(bool)&#10;+ change_turn( )&#10;+ shot( ): x,y" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="22" vertex="1">
+                    <mxGeometry y="88" width="160" height="112" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;&lt;enum&gt;&gt;&#10;directions" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="430" width="160" height="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="- UP: tuple&#10;- DOWN: tuple&#10;- LEFT: tuple&#10;- RIGHT: tuple" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="26">
+                    <mxGeometry y="40" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="26">
+                    <mxGeometry y="110" width="160" height="8" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
